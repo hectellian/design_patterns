@@ -8,6 +8,7 @@ import java.util.stream.*;
 
 class ThanksTest {
     // "Different" Thanks Instences
+    Thanks thanks = Thanks.getInstance();
     Thanks thanks1 = Thanks.getInstance();
     Thanks thanks2 = Thanks.getInstance();
     Thanks thanks3 = Thanks.getInstance();
