@@ -1,5 +1,14 @@
 package design.patterns;
 
+/**
+ * Singleton Design Pattern
+ * 
+ * Single instance of a class is created and shared across the application.
+ * Garantees that given class has only one instance.
+ * 
+ * Here, there's only one instance of Thanks class, we can add or remove thanks but never
+ * create a new instance of this class.
+ */
 public class Thanks {
     private int thanks = 0;
     private static final int bigThanks = 100;
@@ -31,7 +40,17 @@ public class Thanks {
 
     // Consume Thanks
     public void consumeThanks() {
-        thanks--;
+        if (thanks > 0) {
+            thanks--;
+        }
+        else {
+            System.out.println("No thanks to consume.");
+        }
+    }
+
+    // for debug
+    public void resetThanks() {
+        thanks = 0;
     }
 
     // toString
