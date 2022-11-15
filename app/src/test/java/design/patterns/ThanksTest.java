@@ -17,6 +17,11 @@ class ThanksTest {
         System.out.println("--Singleton Thanks Test--");
     }
 
+    @BeforeEach
+    void beforeEach() {
+        thanks.resetThanks();
+    }
+
     @Test
     @DisplayName("Instance Test")
     void thanksHasOneInstance() {
@@ -25,6 +30,35 @@ class ThanksTest {
             () -> assertEquals(thanks2, thanks3),
             () -> assertEquals(thanks3, thanks1)
         );
+    }
+
+    @Test
+    @DisplayName("Add Thanks Test")
+    void addThanks() {
+        thanks.addThanks();
+        assertEquals(1, thanks.getThanks());
+    }
+
+    @Test
+    @DisplayName("Add Big Thanks Test")
+    void addBigThanks() {
+        thanks.addBigThanks();
+        assertEquals(100, thanks.getThanks());
+    }
+
+    @Test
+    @DisplayName("Consume Thanks Test")
+    void consumeThanks() {
+        thanks.addThanks();
+        thanks.consumeThanks();
+        assertEquals(0, thanks.getThanks());
+    }
+
+    @Test
+    @DisplayName("No Negative Consume Thanks Test")
+    void consumeThanksNoThanks() {
+        thanks.consumeThanks();
+        assertEquals(0, thanks.getThanks());
     }
 
     @AfterAll
