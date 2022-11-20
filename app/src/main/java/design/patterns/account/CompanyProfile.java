@@ -1,4 +1,4 @@
-package design.patterns;
+package design.patterns.account;
 
 import java.util.ArrayList;
 import java.util.List;

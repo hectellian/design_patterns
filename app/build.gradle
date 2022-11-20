@@ -28,7 +28,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'design.patterns.Design'
+    mainClass = 'design.patterns.Client'
 }
 
 tasks.named('test') {

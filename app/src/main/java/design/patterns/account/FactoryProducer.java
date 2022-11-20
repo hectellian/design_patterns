@@ -1,4 +1,4 @@
-package design.patterns;
+package design.patterns.account;
 
 public class FactoryProducer {
     public static AbstractFactory getFactory(String choice) {

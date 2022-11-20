@@ -1,4 +1,4 @@
-package design.patterns;
+package design.patterns.account;
 
 /**
  * Abstract Factory
@@ -8,5 +8,5 @@ package design.patterns;
  * This is for the client to avoid to know the implementation details of the creation of the objects.
  */
 public abstract class AbstractFactory {
-    abstract Profile createProfile();
+    abstract public Profile createProfile();
 }
