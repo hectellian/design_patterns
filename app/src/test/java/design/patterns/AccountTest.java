@@ -1,10 +1,10 @@
 package design.patterns;
 
 import org.junit.jupiter.api.*;
+
+import design.patterns.account.*;
+
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.*;
-import java.io.*;
-import java.util.stream.*;
 
 class AccountTest {
     @BeforeAll

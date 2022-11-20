@@ -1,10 +1,8 @@
 package design.patterns;
 
-import java.util.*;
-import java.io.*;
-import java.util.stream.*;
+import design.patterns.account.*;;
 
-public class Design {
+public class Client {
     public static void main(String[] args) {
         // Singleton
         Thanks thanks = Thanks.getInstance();
@@ -19,7 +17,7 @@ public class Design {
         AbstractFactory profileFactory = FactoryProducer.getFactory("user"); // true for user, false for company
         Profile user = profileFactory.createProfile();
         AbstractFactory employeeFactory = FactoryProducer.getFactory("employee");
-        Profile employee = profileFactory.createProfile();
+        Profile employee = employeeFactory.createProfile();
 
         System.out.println(user.toString() + "\n");
         System.out.println(employee.toString() + "\n");
@@ -30,5 +28,6 @@ public class Design {
         System.out.println(company.toString());
 
         // Wrapper
+        
     }
 }

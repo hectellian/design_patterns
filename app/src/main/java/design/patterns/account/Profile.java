@@ -1,4 +1,4 @@
-package design.patterns;
+package design.patterns.account;
 
 public interface Profile {
     String getProfileType();

@@ -2,9 +2,6 @@ package design.patterns;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.*;
-import java.io.*;
-import java.util.stream.*;
 
 class ThanksTest {
     // "Different" Thanks Instences
